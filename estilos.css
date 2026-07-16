@@ -1,0 +1,142 @@
+@charset "utf-8";
+
+@font-face {
+	font-family: "HelveticaNeue Light";
+	src: url('fonts/HelveticaNeue_Light.ttf');
+}
+
+@font-face {
+	font-family: "GlyphWorld Meadow";
+	src: url('fonts/GlyphWorld-Meadow.otf');
+}
+
+@font-face {
+	font-family: "GlyphWorld Forest";
+	src: url('fonts/GlyphWorld-Forest.otf');
+}
+
+@font-face {
+	font-family: "GlyphWorld Animal Soul";
+	src: url('fonts/GlyphWorld-AnimalSoul.otf');
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	color: #000;
+	font-family: "HelveticaNeue Light", sans-serif;
+}
+
+html {
+	scroll-behavior: smooth;
+	height: 100%;
+}
+
+body {
+	background: #fff;
+}
+
+.contenedor {
+	width: 100%;
+	max-width: 1400px;
+	padding: clamp(2.6rem, 3vw, 2.5rem);
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	gap: 6vw;
+}
+
+a:hover {
+	color: gray;
+	text-decoration: underline;
+}
+
+/*----------------------- MAIN -----------------------*/
+
+main {
+	width: 100%;
+}
+
+.intro h1 {
+	font-size: clamp(3rem, 6vw, 3.5rem);
+}
+
+.intro h1 .sfont {
+	font-family: "GlyphWorld Forest", sans-serif;
+}
+
+.intro h1 .bfont {
+	font-family: "GlyphWorld Meadow", sans-serif;
+}
+
+.intro p {
+	margin-top: 0.5em;
+	font-size: clamp(1.1rem, 1.4vw, 1.2rem);
+	line-height: 1.20;
+}
+
+/*----------------------- WORK -----------------------*/
+
+#work {
+	width: 100%;
+	flex: 1;
+}
+
+#work p {
+	font-weight: bolder;
+	font-size: clamp(1.6rem, 3vw, 2.5rem);
+	line-height: 1.20;
+	margin-top: 0.2em;
+}
+
+/*----------------------- PROJECTS DETAILS -----------------------*/
+
+.project-detail {
+	display: none;
+	width: 100%;
+	margin-top: 2em;
+}
+
+.project-detail.open {
+	display: block;
+}
+
+.project-detail .subtitle {
+	color: gray;
+	margin-bottom: 1em;
+}
+
+.project-images {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 1.5em;
+	margin-top: 1.5em;
+}
+
+.project-images img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+
+/*----------------------- FOOTER -----------------------*/
+
+footer .links-cred {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em;
+}
+
+footer .symbol {
+	font-family: "GlyphWorld Animal Soul", sans-serif;
+}
+
+marquee {
+	font-size: 2em;
+	line-height: 1.3em;
+	color: #0000FE;
+	cursor: default;
+}

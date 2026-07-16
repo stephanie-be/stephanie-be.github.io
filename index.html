@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+		<link rel="icon" href="imgs/logo.jpg"/>
+		<link rel="stylesheet" href="estilos.css">
+		<title>Stephanie Bermudez - UX & Marketing Strategy</title>
+	</head>
+
+	<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		document.querySelectorAll('#work a[data-project]').forEach(link => {
+			link.addEventListener('click', e => {
+				e.preventDefault();
+				const target = document.getElementById(link.dataset.project);
+				const isOpen = target.classList.contains('open');
+
+				document.querySelectorAll('.project-detail').forEach(d => d.classList.remove('open'));
+
+				if (!isOpen) {
+					target.classList.add('open');
+					target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+				}
+			});
+		});
+	});
+	</script>
+	
+	<body>
+		<div class="contenedor">
+
+			<main>
+				<div class="intro">
+					<h1><span class="sfont">S</span>tephanie <span class="bfont">B</span>ermudez</h1>
+					<p>Into tech, nature and planning for social impact. Currently focused on early stage projects creating clearer and effective experiences. Formative education in front-end and UX (2016), Digital Creativity (2021) and Advertising Management (2017-2023).</p> 
+				</div>
+			</main>
+
+			<section id="work">
+				<p>
+					UX Design in <a href="#" data-project="pettech">Pet-tech</a> /
+					<a href="#" data-project="crowdfunding">Crowdfunding</a> /
+					<a href="#" data-project="ecommerce">E-commerce</a> / Marketing @ <a href="https://www.behance.net/gallery/196584975/Marketing-Comms" target="_blank" rel="noopener noreferrer"> /Presente ONG / Misha Rastrera / Paremos el Acoso Callejero</a>
+				</p>
+			</section>
+
+			<div class="project-detail" id="pettech">
+				<h2>Pet-tech</h2>
+				<p class="subtitle">Pet Services · 2026</p>
+				<p>MVP-1 based on research of Pet owners's pain points: Health and transparency of Vet Services.</p>
+				<p>Role: UX Design lead, from organizing the team, leading the market and user research to low-fi wireframes.</p>
+				<div class="project-images">
+					<img src="imgs/pettech/01.jpg" alt="Pet-tech pantalla 1">
+					<img src="imgs/pettech/02.jpg" alt="Pet-tech pantalla 2">
+					<img src="imgs/pettech/03.jpg" alt="Pet-tech pantalla 3">
+					<img src="imgs/pettech/04.jpg" alt="Pet-tech pantalla 4">
+				</div>
+			</div>
+
+			<div class="project-detail" id="crowdfunding">
+				<h2>Manos a la Olla</h2>
+				<p class="subtitle">Crowfunding · 2021-2022</p>
+				<p>Problem: Community kitchens lack time and resources to promote continuous donations.</p>
+				<p>Role: Product Manager</p>				
+				<div class="project-images">
+					<img src="imgs/crowdfunding/01.jpg" alt="Crowdfunding pantalla 1">
+					<img src="imgs/crowdfunding/02.jpg" alt="Crowdfunding pantalla 2">
+					<img src="imgs/crowdfunding/03.jpg" alt="Crowdfunding pantalla 3">
+					<img src="imgs/crowdfunding/04.jpg" alt="Crowdfunding pantalla 4">
+				</div>
+			</div>
+
+			<div class="project-detail" id="ecommerce">
+				<h2>Metro</h2>
+				<p class="subtitle">E-commerce · 2020</p>
+				<p>Re-design 1: Lists. Incentive rebuy and discovery based on users' already preferred products.</p>
+				<p>Re-design 2: Chatbot. Adding tracking an order whitin the web/app.</p>
+				<p>Role: UX Design Assistant</p>
+				<div class="project-images">
+					<img src="imgs/ecommerce/01.jpg" alt="Ecommerce pantalla 1">
+					<img src="imgs/ecommerce/02.jpg" alt="Ecommerce pantalla 2">
+				</div>
+			</div>
+
+			<footer>
+				<div class="links-cred">
+					<div class="footer-text">
+						<p><span class="symbol">- </span>Available for custom projects, contact: <a href="mailto:sstephanie.be@gmail.com">sstephanie.be@gmail.com</a></p>
+					</div>
+					<div class="marquee"><marquee direction="right" scrollamount="4" behavior="scroll">⬤</marquee></div>
+				</div>
+			</footer>
+
+		</div>
+	</body>
+</html>
