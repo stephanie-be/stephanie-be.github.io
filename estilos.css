@@ -118,6 +118,9 @@ main {
 	width: 100%;
 	height: auto;
 	display: block;
+	user-select: none;
+	-webkit-user-drag: none;
+	pointer-events: none;
 }
 
 
