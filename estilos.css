@@ -40,7 +40,7 @@ body {
 .contenedor {
 	width: 100%;
 	max-width: 1400px;
-	padding: clamp(2.6rem, 3vw, 2.5rem);
+	padding: clamp(1.5rem, 3vw, 2.5rem);
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
